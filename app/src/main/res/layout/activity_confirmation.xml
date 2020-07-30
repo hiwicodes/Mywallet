@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".confirmation">
+
+    <TextView
+        android:id="@+id/txtdisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:text="enter the code thats been sent to you via SMS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="enter code here"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/txtdisplay"
+        app:layout_constraintStart_toStartOf="@+id/txtdisplay"
+        app:layout_constraintTop_toBottomOf="@+id/txtdisplay" />
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="confirm"
+        app:layout_constraintEnd_toEndOf="@+id/txtcode"
+        app:layout_constraintStart_toStartOf="@+id/txtcode"
+        app:layout_constraintTop_toBottomOf="@+id/txtcode" />
+
+    <Button
+        android:id="@+id/btnresend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="resend"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtresend"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="@+id/txtresend"
+        app:layout_constraintTop_toBottomOf="@+id/txtresend"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtresend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:text="Didn't receive code?"
+        app:layout_constraintEnd_toEndOf="@+id/btnConfirm"
+        app:layout_constraintStart_toStartOf="@+id/btnConfirm"
+        app:layout_constraintTop_toBottomOf="@+id/btnConfirm" />
+</androidx.constraintlayout.widget.ConstraintLayout>
