@@ -3,4 +3,12 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="icegold">#a0d2eb</color>
+    <color name="darksand">#a28089</color>
+    <color name="sandtan">#e1b382</color>
+    <color name="misty">#f9c5bd</color>
+    <color name="majestic">#8076a3</color>
+    <color name="back">#F8F7F0F0</color>
+    <color name="baaa">#E29E9E</color>
+    <color name="ba">#EEC2BF</color>
 </resources>

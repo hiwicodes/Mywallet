@@ -1,79 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".registration">
 
+    <TextView
+        android:id="@+id/askFname"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="80dp"
+        android:inputType="textPersonName"
+
+        android:text="First name" />
+
     <EditText
         android:id="@+id/txtFname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="90dp"
-        android:ems="10"
-        android:hint="First name"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/askFname"
+        android:layout_marginLeft="40dp"
+        android:inputType="textShortMessage" />
+
+    <TextView
+        android:id="@+id/askLname"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/txtFname"
+        android:layout_marginLeft="40dp"
+        android:gravity="bottom"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Last name" />
 
     <EditText
         android:id="@+id/txtLname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="Last name"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/txtFname"
-        app:layout_constraintStart_toStartOf="@+id/txtFname"
-        app:layout_constraintTop_toBottomOf="@+id/txtFname" />
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/askLname"
+        android:layout_marginLeft="40dp"
+        android:inputType="textShortMessage" />
 
-    <EditText
-        android:id="@+id/txtEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:ems="10"
-        android:hint="enter email here"
+    <TextView
+        android:id="@+id/askEmail"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/txtLname"
+        android:layout_marginLeft="40dp"
+        android:gravity="bottom"
         android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="@+id/txtLname"
-        app:layout_constraintStart_toStartOf="@+id/txtLname"
-        app:layout_constraintTop_toBottomOf="@+id/txtLname" />
-
+        android:text="E-mail" />
     <EditText
-        android:id="@+id/txtPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="enter phone number"
-        android:inputType="phone"
-        app:layout_constraintEnd_toEndOf="@+id/txtEmail"
-        app:layout_constraintStart_toStartOf="@+id/txtEmail"
-        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_below="@id/askEmail"
+        android:id="@+id/txtEmail"/>
 
-    <EditText
-        android:id="@+id/txtBdate"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="enter date of birth here"
+        android:orientation="vertical"
+        android:layout_marginLeft="40dp"
+        android:layout_below="@id/txtEmail"
+        android:id="@+id/linearone">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom"
+            android:text="Phone number"
+            android:textSize="18sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:ccp_defaultNameCode="ETH"
+                app:ccp_autoDetectCountry="true"
+                app:ccp_showNameCode="true"
+                app:ccp_textSize="16sp"
+
+                />
+
+            <EditText
+                android:id="@+id/txtPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:inputType="phone"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/askBdate"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/linearone"
+        android:layout_marginLeft="40dp"
+        android:gravity="bottom"
         android:inputType="date"
-        app:layout_constraintEnd_toEndOf="@+id/txtPhone"
-        app:layout_constraintStart_toStartOf="@+id/txtPhone"
-        app:layout_constraintTop_toBottomOf="@+id/txtPhone" />
-
+        android:text="birth date" />
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_below="@id/askBdate"
+        android:id="@+id/txtBdate"/>
     <Button
         android:id="@+id/btnNext"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="next"
-        app:layout_constraintEnd_toEndOf="@+id/txtBdate"
-        app:layout_constraintStart_toStartOf="@+id/txtBdate"
-        app:layout_constraintTop_toBottomOf="@+id/txtBdate" />
+        android:enabled="false"
+        android:text="Next"
+        android:layout_marginLeft="100dp"
+        android:layout_below="@id/txtBdate"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>

@@ -4,39 +4,42 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-private Button Login;
-private Button Register;
+    private Button Customer;
+    private Button Retailer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Login = findViewById(R.id.btnLogin);
-        Login.setOnClickListener(new View.OnClickListener() {
+        Customer= findViewById(R.id.btnCustomer);
+        Customer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openOPtions();
+                openMainactivity2();
             }
         });
-        Register = findViewById(R.id.btnRegister);
-        Register.setOnClickListener(new View.OnClickListener() {
+        Retailer = findViewById(R.id.btnRetailer);
+        Retailer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openregistration();
+                openretail();
             }
         });
+
+
     }
-    public void openOPtions(){
-        Intent intent = new Intent(MainActivity.this,Options.class);
+    public void openMainactivity2(){
+        Intent intent = new Intent(MainActivity.this,Main2Activity.class);
         startActivity(intent);
     }
-public void openregistration(){
-        Intent intent1= new Intent(MainActivity.this, registration.class);
-        startActivity(intent1);
-}
-
+    public void openretail(){
+        Intent intent = new Intent(MainActivity.this,retailer_login.class);
+        startActivity(intent);
     }
-
+}

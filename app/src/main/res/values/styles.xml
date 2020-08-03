@@ -5,7 +5,27 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
+<!--        <item name="color">@color/majestic</item>-->
+<!--        <item name="colorOnBackground">@color/misty</item>-->
+<!--        <item name="colorOnSurface">@color/icegold</item>-->
+<!--        <item name="colorSurface">@color/sandtan</item>-->
+<!--        <item name="colorPrimarySurface">@color/darksand</item>-->
+<!--        <item name="colorAccent">@color/colorAccent</item>-->
+<!--        <item name="cornerFamilyBottomLeft">@color/baaa</item>-->
+<!--        <style name="customizeAppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">-->
+            <!-- Customize your theme here. -->
+<!--            <item name="colorPrimary">@color/colorPrimaryDark</item>-->
+<!--            -->
+            <item name="colorAccent">@color/colorAccent</item>
+<!--            <item name="colorPrimary">@color/colorPrimary</item>-->
+<!--            <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+<!--            <item name="color">@color/majestic</item>-->
+<!--            <item name="colorOnBackground">@color/misty</item>-->
+<!--            <item name="colorOnSurface">@color/icegold</item>-->
+<!--            <item name="colorSurface">@color/sandtan</item>-->
+<!--            <item name="colorPrimarySurface">@color/darksand</item>-->
+<!--&lt;!&ndash;            <item name="colorAccent">@color/colorAccent</item>&ndash;&gt;-->
+<!--            <item name="cornerFamilyBottomLeft">@color/baaa</item>-->
+        </style>
 
 </resources>
