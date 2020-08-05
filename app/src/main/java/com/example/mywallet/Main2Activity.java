@@ -41,7 +41,7 @@ public class Main2Activity extends AppCompatActivity {
         password.addTextChangedListener(nexttextwatcher);
     }
     public void openOPtions(){
-        Intent intent = new Intent(Main2Activity.this,Options.class);
+        Intent intent = new Intent(this, Options.class);
         startActivity(intent);
     }
 
@@ -68,7 +68,7 @@ public class Main2Activity extends AppCompatActivity {
         }
     };
     public void openregistration(){
-        Intent intent1= new Intent(Main2Activity.this, registration.class);
+        Intent intent1 = new Intent(this, registration.class);
         startActivity(intent1);
     }
     }

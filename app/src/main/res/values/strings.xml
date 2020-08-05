@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My wallet</string>
+    <string name="customer">Customer</string>
+    <string name="retailer">Retailer</string>
 </resources>
